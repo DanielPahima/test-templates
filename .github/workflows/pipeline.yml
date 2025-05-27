@@ -5,4 +5,4 @@ on:
 
 jobs:
   set-version:
-    uses: DanielPahima/templates/.github/workflows/pipeline/version/set-version.yml@main
+    uses: DanielPahima/templates/.github/workflows/version.yml@main
