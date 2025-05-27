@@ -1,0 +1,8 @@
+name: Test Set Version Job with Flask Project
+
+on:
+  workflow_dispatch:
+
+jobs:
+  set-version:
+    uses: danielp98/templates/pipeline/vars/set-version.yml@main
