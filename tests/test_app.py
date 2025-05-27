@@ -16,3 +16,4 @@ def test_hello(client):
     
     # בודקים שהתגובה מכילה את הטקסט "Hello, World!"
     assert response.data.decode('utf-8') == "Hello, World!"
+
