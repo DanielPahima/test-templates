@@ -5,4 +5,4 @@ on:
 
 jobs:
   set-version:
-    uses: danielp98/templates/pipeline/vars/set-version.yml@main
+    uses: DanielPahima/templates/pipeline/vars/set-version.yml@main
