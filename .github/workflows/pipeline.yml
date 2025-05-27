@@ -7,9 +7,13 @@ on:
 
 jobs:
   set-version:
+    needs: [lint, unit-test]
     permissions:
       contents: write
     uses: DanielPahima/templates/.github/workflows/version.yml@main
 
   lint:
     uses: DanielPahima/templates/.github/workflows/python-lint.yml@main
+
+  unit-test:
+    uses: DanielPahima/templates/.github/workflows/python-unit-tests.yml@main
