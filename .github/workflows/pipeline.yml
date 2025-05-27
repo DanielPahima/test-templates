@@ -1,7 +1,9 @@
 name: Test Set Version Job with Flask Project
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - '**' 
 
 jobs:
   set-version:
