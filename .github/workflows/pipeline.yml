@@ -16,4 +16,7 @@ jobs:
     uses: DanielPahima/templates/.github/workflows/python-lint.yml@main
 
   unit-test:
+    permissions:
+      contents: read
+      checks: write 
     uses: DanielPahima/templates/.github/workflows/python-unit-tests.yml@main
