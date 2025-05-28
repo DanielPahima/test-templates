@@ -21,10 +21,3 @@ jobs:
       checks: write 
     uses: DanielPahima/templates/.github/workflows/python-unit-tests.yml@main
   
-  codeql:
-    permissions:
-      security-events: write
-    uses: DanielPahima/templates/.github/workflows/security-test.yml@main
-    with:
-      languages: '["python"]' 
-  
