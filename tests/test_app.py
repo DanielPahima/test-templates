@@ -1,19 +1,18 @@
 import pytest
-from app import app
+from app.app import app  # ייבוא נכון של ה-Flask app מתוך תיקיית app
 
 @pytest.fixture
 def client():
-    # מגדירים את סביבת העבודה לבדיקה
+    # יוצר client עבור Flask לצורך הבדיקות
     with app.test_client() as client:
         yield client
 
 def test_hello(client):
-    # שולחים בקשה ל-root של היישום
+    # שולח בקשה ל-root של היישום
     response = client.get('/')
     
-    # בודקים שהסטטוס קוד הוא 200 (OK)
+    # בודק שהסטטוס קוד הוא 200 (OK)
     assert response.status_code == 200
     
-    # בודקים שהתגובה מכילה את הטקסט "Hello, World!"
+    # בודק שהתגובה מכילה את הטקסט "Hello, World!"
     assert response.data.decode('utf-8') == "Hello, World!"
-
